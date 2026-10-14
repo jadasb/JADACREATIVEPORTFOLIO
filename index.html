@@ -269,7 +269,7 @@
     .campaigns-bg-img {
       position: absolute;
       inset: 0;
-      background: url('CAMPAIGNS PAGE.jpg') center 30% / cover no-repeat;
+      background: url('CAMPAIGNS PAGE.jpg') center 5% / cover no-repeat;
     }
 
     .campaigns-list {
@@ -650,7 +650,9 @@
     .contact-hero-bg {
       position: absolute;
       inset: 0;
-      background: url('CONTACT PAGE.jpg') center center / cover no-repeat;
+      background:
+        url('CONTACT PAGE.jpg') center 6vh / max(100%, calc(94vh * 1.778)) auto no-repeat,
+        linear-gradient(to right, rgb(168,192,237), rgb(159,183,222) 37%, rgb(203,210,243) 62%, rgb(135,164,216));
     }
 
     .contact-hero-bg::after {
@@ -863,6 +865,9 @@
 })();
 </script>
 <style>
+[id$="-gallery"] > div{grid-template-rows:minmax(0,1fr)}
+[id$="-gallery"] img{min-height:0}
+[id$="-gallery"] img:not([style*="object-position"]){object-position:center top}
 .img-missing{width:100%;height:100%;min-height:120px;display:flex;align-items:center;justify-content:center;
   background:repeating-linear-gradient(45deg,#f3f3f3,#f3f3f3 10px,#e9e9e9 10px,#e9e9e9 20px);
   color:#888;font:600 10px/1.4 sans-serif;letter-spacing:.08em;text-align:center;padding:12px;box-sizing:border-box;}
@@ -882,7 +887,6 @@
       <li><a href="#home" onclick="showSection('home')" data-section="home">HOME</a></li>
       <li><a href="#about" onclick="showSection('about')" data-section="about">ABOUT</a></li>
       <li><a href="#campaigns" onclick="showSection('campaigns')" data-section="campaigns">CAMPAIGNS</a></li>
-      <li><a href="#references" onclick="showSection('references')" data-section="references">REFERENCES</a></li>
       <li><a href="#contact" onclick="showSection('contact')" data-section="contact">CONTACT</a></li>
     </ul>
   </nav>
@@ -1180,14 +1184,14 @@
       <div id="mg-gallery" style="display:flex;overflow:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;height:44vw;">
         <!-- Slide 1: 1, 2, 3 -->
         <div style="min-width:100%;scroll-snap-align:start;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;height:100%;">
-          <img src="04. MISSGUIDED IMAGES/GALLERY 1.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="04. MISSGUIDED IMAGES/GALLERY 1.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 85%;display:block;">
           <img src="04. MISSGUIDED IMAGES/GALLERY 2.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <img src="04. MISSGUIDED IMAGES/GALLERY 3.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="04. MISSGUIDED IMAGES/GALLERY 3.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 85%;display:block;">
         </div>
         <!-- Slide 2: 4, 5, 6 -->
         <div style="min-width:100%;scroll-snap-align:start;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;height:100%;">
           <img src="04. MISSGUIDED IMAGES/GALLERY 4.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <img src="04. MISSGUIDED IMAGES/GALLERY 5.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <img src="04. MISSGUIDED IMAGES/GALLERY 5.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 85%;display:block;">
           <img src="04. MISSGUIDED IMAGES/GALLERY 6.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <!-- Slide 3: 7, 8, 9 -->
@@ -1207,7 +1211,7 @@
 
     <!-- LEAD BANNER -->
     <div class="cd-hero" style="height:100vh;">
-      <img src="05. PLAYBOY IMAGES/PB LEAD BANNER.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;z-index:0;" alt="Playboy">
+      <img src="05. PLAYBOY IMAGES/PB LEAD BANNER.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;z-index:0;" alt="Playboy">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.1) 60%);z-index:1;"></div>
       <div style="position:absolute;bottom:60px;right:48px;text-align:right;z-index:2;">
         <h2 style="font-size:clamp(64px,10vw,130px);font-weight:900;color:#fff;line-height:0.95;letter-spacing:-0.02em;">PLAYBOY</h2>
@@ -1587,7 +1591,7 @@
   <!-- ── CHERRY OMODA ── -->
   <div id="detail-cherry" class="campaign-detail hidden">
     <div class="cd-hero" style="height:100vh;">
-      <img src="07. CHERRY OMODA/LEAD BANNER IMAGE.JPG" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" alt="Cherry Omoda">
+      <img src="07. CHERRY OMODA/LEAD BANNER IMAGE.JPG" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 64%;z-index:0;" alt="Cherry Omoda">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.1) 60%);z-index:1;"></div>
       <div style="position:absolute;bottom:80px;right:48px;text-align:right;z-index:2;">
         <h2 style="font-size:clamp(64px,10vw,130px);font-weight:900;color:#fff;line-height:0.95;letter-spacing:-0.02em;">CHERRY OMODA</h2>
@@ -1623,7 +1627,7 @@
 
       <!-- Image right panel -->
       <div style="overflow:hidden;">
-        <img src="07. CHERRY OMODA/1.JPG" style="width:100%;height:100%;object-fit:cover;" alt="">
+        <img src="07. CHERRY OMODA/1.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center 65%;" alt="">
       </div>
 
     </div>
@@ -1667,13 +1671,13 @@
       <div id="co-gallery" style="display:flex;overflow:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;height:44vw;">
         <div style="min-width:100%;scroll-snap-align:start;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;height:100%;">
           <img src="07. CHERRY OMODA/IMAGE 2.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center bottom;" alt="">
-          <img src="07. CHERRY OMODA/3.JPG" style="width:100%;height:100%;object-fit:cover;" alt="">
+          <img src="07. CHERRY OMODA/6.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;" alt="">
           <img src="07. CHERRY OMODA/IMAGE 3.JPG" style="width:100%;height:100%;object-fit:cover;object-position:center bottom;" alt="">
         </div>
         <div style="min-width:100%;scroll-snap-align:start;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;height:100%;">
           <img src="07. CHERRY OMODA/4.JPG" style="width:100%;height:100%;object-fit:cover;" alt="">
           <img src="07. CHERRY OMODA/5.JPG" style="width:100%;height:100%;object-fit:cover;" alt="">
-          <img src="07. CHERRY OMODA/6.JPG" style="width:100%;height:100%;object-fit:cover;" alt="">
+          <img src="07. CHERRY OMODA/3.JPG" style="width:100%;height:100%;object-fit:cover;" alt="">
         </div>
       </div>
     </div>
@@ -1681,86 +1685,6 @@
   </div>
 
 
-  <!-- ═══════════ REFERENCES ═══════════ -->
-  <section id="references" class="hidden">
-    <h1>REFERENCES</h1>
-
-    <div class="ref-row" onclick="toggleRef(this)">
-      <div class="ref-header">
-        <div class="ref-left"><h3>NAME</h3></div>
-        <div class="ref-right">
-          <div class="ref-right-meta">
-            <p>ROLE / TITLE</p>
-            <p>COMPANY NAME</p>
-            <p>LOCATION — YEAR</p>
-          </div>
-          <span class="ref-chevron">↓</span>
-        </div>
-      </div>
-      <div class="ref-body">
-        <div class="ref-body-inner">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec lobortis leo. Sed ut facilisis augue. Vivamus fringilla id nulla id aliquam. Etiam ornare pretium fermentum. Curabitur eget felis justo."</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ref-row" onclick="toggleRef(this)">
-      <div class="ref-header">
-        <div class="ref-left"><h3>NAME</h3></div>
-        <div class="ref-right">
-          <div class="ref-right-meta">
-            <p>ROLE / TITLE</p>
-            <p>COMPANY NAME</p>
-            <p>LOCATION — YEAR</p>
-          </div>
-          <span class="ref-chevron">↓</span>
-        </div>
-      </div>
-      <div class="ref-body">
-        <div class="ref-body-inner">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec lobortis leo. Sed ut facilisis augue. Vivamus fringilla id nulla id aliquam. Etiam ornare pretium fermentum. Curabitur eget felis justo."</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ref-row" onclick="toggleRef(this)">
-      <div class="ref-header">
-        <div class="ref-left"><h3>NAME</h3></div>
-        <div class="ref-right">
-          <div class="ref-right-meta">
-            <p>ROLE / TITLE</p>
-            <p>COMPANY NAME</p>
-            <p>LOCATION — YEAR</p>
-          </div>
-          <span class="ref-chevron">↓</span>
-        </div>
-      </div>
-      <div class="ref-body">
-        <div class="ref-body-inner">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec lobortis leo. Sed ut facilisis augue. Vivamus fringilla id nulla id aliquam. Etiam ornare pretium fermentum. Curabitur eget felis justo."</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ref-row" onclick="toggleRef(this)">
-      <div class="ref-header">
-        <div class="ref-left"><h3>NAME</h3></div>
-        <div class="ref-right">
-          <div class="ref-right-meta">
-            <p>ROLE / TITLE</p>
-            <p>COMPANY NAME</p>
-            <p>LOCATION — YEAR</p>
-          </div>
-          <span class="ref-chevron">↓</span>
-        </div>
-      </div>
-      <div class="ref-body">
-        <div class="ref-body-inner">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec lobortis leo. Sed ut facilisis augue. Vivamus fringilla id nulla id aliquam. Etiam ornare pretium fermentum. Curabitur eget felis justo."</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══════════ CONTACT ═══════════ -->
   <section id="contact" class="hidden">
@@ -1814,7 +1738,7 @@
   </footer>
 
   <script>
-    const allSections = ['home', 'about', 'campaigns', 'references', 'contact'];
+    const allSections = ['home', 'about', 'campaigns', 'contact'];
     const allDetails = ['babyphat', 'missguided', 'playboy', 'kstm', 'edera', 'laffrey', 'holly', 'cherry'];
 
     const nav = document.getElementById('nav');
@@ -1870,12 +1794,6 @@
       window.scrollTo(0, 0);
     }
 
-    // ── References accordion ──
-    function toggleRef(row) {
-      const isOpen = row.classList.contains('open');
-      document.querySelectorAll('.ref-row.open').forEach(r => r.classList.remove('open'));
-      if (!isOpen) row.classList.add('open');
-    }
 
     // ── Nav hide on scroll down, show on scroll up ──
     let lastScrollY = 0;
